@@ -7,6 +7,7 @@
     <title>CIMongo - MongoDB Library for Codeigniter 2 Framework.</title>
     <meta name="keywords" content="CIMongo, mongodb, Codeigniter, php, library">
     <meta name="description" content="CIMongo - MongoDB Library for Codeigniter 2 Framework.">
+    <meta name="author" content="Intekhab Rizvi @ eBrandz">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
@@ -49,15 +50,17 @@
       }
 
       div.box{
-        margin-top:60px;
-        margin-bottom:60px;
+        margin-top:30px;
+        margin-bottom:30px;
         font-size:18px;
         min-height: 600px;
         height:auto;
       }
 
-      div.box h1{
-        margin-bottom: 30px;
+      div.box h1, div.box code{
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+        display: block;
       }
 
       div.box p{
@@ -113,8 +116,25 @@
                 <p>&nbsp;1) Open config/mongo_db.php file and set mongodb login details.</p>
                 <p>&nbsp;2) Open config/autoload.php file and add 'mongo_db' in $autoload['libraries'] array. </p>
                 <p>Thats it. Installation and Configuration completed. By default library connect to database provided in "default" group.</p>
-                <p>&nbsp;</p>
                 <p>Now you can access the methods using <b>$this->mongo_db-></b> in your controller as well as in model.</p>
+                <h1>Need more then one database connection ??</h1>
+                <p>You can have more then one database in your application and you can use them simultaneously in your app just like Codeigniter Active Data Record.</p>
+                <p>1) Open application/config/mongo_db.php file and create one more database group inside that file. For example</p>
+                <code>$config['mongo_db']['newdb']['hostname'] = 'localhost';<br/>
+$config['mongo_db']['newdb']['port'] = '27017';<br/>
+$config['mongo_db']['newdb']['username'] = 'username';<br/>
+$config['mongo_db']['newdb']['password'] = 'password';<br/>
+$config['mongo_db']['newdb']['database'] = 'database';<br/>
+$config['mongo_db']['newdb']['db_debug'] = TRUE;<br/>
+$config['mongo_db']['newdb']['write_concerns'] = (int)1;<br/>
+$config['mongo_db']['newdb']['journal'] = TRUE;<br/>
+$config['mongo_db']['newdb']['read_preference'] = NULL;<br/>
+$config['mongo_db']['newdb']['read_preference_tags'] = NULL;
+                </code>
+                <p>You can change group name from "newdb" to anything else you want. After changing the group name, save the file.</p>
+                <p>2) Now open your controller or model file, where you need another database connection active and write below code in the constructor of the class.</p>
+                <code>$this->load->library('mongo_db', array('activate'=>'newdb'),'mongo_db2');</code>
+                <p>This will make new connection on new mongoDB and make it available to use as <b>$this->mongo_db2-></b> inside class</p>
               </div>
             </div>
       </div>
@@ -125,7 +145,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $('document').ready(function (){
-        $('div.presentation').css('height',(screen.height-220)+'px');
+        $('div.presentation').css('height',(screen.height-120)+'px');
         $('.scroll').click(function() {
             $('body').animate({
                 scrollTop: eval($('#' + $(this).attr('id')).offset().top - 70)
