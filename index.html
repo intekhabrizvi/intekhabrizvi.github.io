@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CIMongo - MongoDB Library for Codeigniter 2 Framework.</title>
-    <meta name="keywords" content="CIMongo, mongodb, Codeigniter, php, library">
-    <meta name="description" content="CIMongo - MongoDB Library for Codeigniter 2 Framework.">
-    <meta name="author" content="Intekhab Rizvi @ eBrandz">
+    <title>OpenSource Contribution from Intekhab Rizvi</title>
+    <meta name="keywords" content="intekhabrizvi, intekhab rizvi, cimongo, mongodb, codeigniter, php, library">
+    <meta name="description" content="OpenSource Contribution from Intekhab Rizvi">
+    <meta name="author" content="Intekhab Rizvi">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
@@ -35,7 +35,7 @@
           color:#fff;
       }
       div.presentation div.main{
-        margin-top:250px;
+        margin-top:150px;
       }
       div.presentation div.main h1{
         font-size: 50px;
@@ -47,6 +47,22 @@
         text-align: center;
         font-weight: 100;
 
+      }
+
+      div.presentation div.main ul
+      {
+        text-align: center;
+        margin-top:50px;
+      }
+
+      div.presentation div.main ul li
+      {
+        margin-bottom: 10px;
+      }
+
+      div.presentation div.main ul li a{
+        font-size: 18px;
+        color:#fff;
       }
 
       div.box{
@@ -69,99 +85,28 @@
     </style>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-default" role="navigation" style="margin-bottom:0;">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">CIMongo</a>
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="#installation" class="scroll">Installation</a></li>
-              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Methods <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Select Methods</a></li>
-                    <li><a href="#">Where Methods</a></li>
-                    <li><a href="#">From / Sort Methods</a></li>
-                    <li><a href="#">Index Methods</a></li>
-                    <li><a href="#">Aggregation Methods</a></li>                    
-                    <li><a href="#">Collection Level Methods</a></li>
-                    <li><a href="#">DB Level Methods</a></li>
-                </ul>
-              </li>
-              <li><a href="https://github.com/intekhabrizvi/cimongo">Download</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    </header>
     <div class="presentation">
           <div class="container">
             <div class="row">
             <div class="col-md-12">
                 <div class="main">
-                  <h1>CIMongo</h1>
-                  <p>MongoDB Library for Codeigniter 2</p>
-                  <p><small>By intekhab rizvi @ eBrandz</small></p>
+                  <h1>Intekhab Rizvi</h1>
+                  <p>My OpenSource Contribution</p>
+                  <br/>
+                  <ul>
+                      <li><a href="mongodb-library-for-codeigniter.html">MongoDB library for Codeigniter framework.</a></li>
+                      <li><a href="php-mongodb-profiller-for-codeigniter.html">PHP MongoDB Profiller for Codeigniter framework.</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
     </div>
-    <div class="box" id="installation">
-      <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h1>How to install & configure</h1>
-                <p>Download the repo and unzip it. You will see 2 folder config and libraries. Paste those 2 folder in your codeigniter application folder.</p>
-                <p>After this, you will see mongo_db.php file in your application/config and application/libraries folder of codeigniter setup.</p>
-                <p>Now its time to configure cimongo library as per mongodb login details.</p>
-                <p>&nbsp;1) Open config/mongo_db.php file and set mongodb login details.</p>
-                <p>&nbsp;2) Open config/autoload.php file and add 'mongo_db' in $autoload['libraries'] array. </p>
-                <p>Thats it. Installation and Configuration completed. By default library connect to database provided in "default" group.</p>
-                <p>Now you can access the methods using <b>$this->mongo_db-></b> in your controller as well as in model.</p>
-                <h1>Need more then one database connection ??</h1>
-                <p>You can have more then one database in your application and you can use them simultaneously in your app just like Codeigniter Active Data Record.</p>
-                <p>1) Open application/config/mongo_db.php file and create one more database group inside that file. For example</p>
-                <code>$config['mongo_db']['newdb']['hostname'] = 'localhost';<br/>
-$config['mongo_db']['newdb']['port'] = '27017';<br/>
-$config['mongo_db']['newdb']['username'] = 'username';<br/>
-$config['mongo_db']['newdb']['password'] = 'password';<br/>
-$config['mongo_db']['newdb']['database'] = 'database';<br/>
-$config['mongo_db']['newdb']['db_debug'] = TRUE;<br/>
-$config['mongo_db']['newdb']['write_concerns'] = (int)1;<br/>
-$config['mongo_db']['newdb']['journal'] = TRUE;<br/>
-$config['mongo_db']['newdb']['read_preference'] = NULL;<br/>
-$config['mongo_db']['newdb']['read_preference_tags'] = NULL;
-                </code>
-                <p>You can change group name from "newdb" to anything else you want. After changing the group name, save the file.</p>
-                <p>2) Now open your controller or model file, where you need another database connection active and write below code in the constructor of the class.</p>
-                <code>$this->load->library('mongo_db', array('activate'=>'newdb'),'mongo_db2');</code>
-                <p>This will make new connection on new mongoDB and make it available to use as <b>$this->mongo_db2-></b> inside class</p>
-              </div>
-            </div>
-      </div>
-    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $('document').ready(function (){
-        $('div.presentation').css('height',(screen.height-120)+'px');
-        $('.scroll').click(function() {
-            $('body').animate({
-                scrollTop: eval($('#' + $(this).attr('id')).offset().top - 70)
-            }, 2000);
-        });
+        $('div.presentation').css('height',(screen.height-100)+'px');
       });
     </script>
   </body>
