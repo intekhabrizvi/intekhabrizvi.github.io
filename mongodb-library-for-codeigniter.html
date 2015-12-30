@@ -119,6 +119,7 @@
               <li><a href="#installation" class="scroll">Installation</a></li>
               <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Methods <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
+                    <li><a href="#method-insert">Insert Methods</a></li>
                     <li><a href="#method-select">Select Methods</a></li>
                     <li><a href="#method-update">Update Methods</a></li>
                     <li><a href="#method-delete">Delete Methods</a></li>
@@ -182,11 +183,16 @@
       </div>
     </div>
 
-    <div class="box" id="method-select">
+    <div class="box">
       <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h1>Select Methods</h1>
+                <h1 id="method-insert">Insert Methods</h1>
+                <ul>
+                    <li><b>insert Insert</b> a new document into a collection</li>
+                    <li><b>batch_insert</b> Insert multiple new documents into a collection</li>
+                </ul>
+                <h1 id="method-select">Select Methods</h1>
                 <ul>
                   <li><b>select</b> Get select fields from returned documents</li>
                   <li><b>where</b> OR <b>get_where</b> Where section of the query</li>
@@ -232,6 +238,10 @@
                 <h1 id="method-aggregate">Aggregate Methods</h1>
                 <ul>
                   <li><b>aggregate</b> Perform aggregation query on document</li>
+                </ul>
+                <h1 id="method-aggregate">Profiling Methods</h1>
+                <ul>
+                  <li><b>output_benchmark</b> return complete explain data for all the find based query performed</li>
                 </ul>
                 <h1 id="method-index">Index Methods</h1>
                 <ul>
