@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CIMongo - MongoDB Library for Codeigniter Framework.</title>
+    <meta name="keywords" content="cimongo, mongodb, codeigniter, php, library, mongoDB library for codeigniter">
+    <meta name="description" content="CIMongo - MongoDB Library for Codeigniter Framework.">
+    <meta name="author" content="Intekhab Rizvi">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      *{
+        margin:0;
+        padding:0;
+      }
+      body{
+        font-family: 'Lato',Helvetica,Arial,sans-serif;
+        font-weight: 300;
+      }
+      header{
+        background-color: #FFF;
+      }
+      div.presentation{
+          background-color:#6f5499;
+          color:#fff;
+      }
+      div.presentation div.main{
+        margin-top:250px;
+      }
+      div.presentation div.main h1{
+        font-size: 50px;
+        text-align: center;
+        font-weight: 400;
+      }
+      div.presentation div.main p{
+        font-size: 25px;
+        text-align: center;
+        font-weight: 100;
+
+      }
+
+      div.box{
+        margin-top:30px;
+        margin-bottom:30px;
+        font-size:18px;
+        min-height: 600px;
+        height:auto;
+      }
+
+      div.box h1, div.box code{
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+        display: block;
+      }
+
+      div.box p{
+        font-size: 22px !important;
+      }
+
+      div.box ul{
+        margin-left: 20px;
+      }
+
+      #back-to-top {
+          position: fixed;
+          bottom: 40px;
+          right: 40px;
+          z-index: 9999;
+          width: 32px;
+          height: 32px;
+          text-align: center;
+          line-height: 30px;
+          background: #6f5499;
+          color: #fff;
+          cursor: pointer;
+          border: 0;
+          border-radius: 2px;
+          text-decoration: none;
+          transition: opacity 0.2s ease-out;
+          opacity: 0;
+      }
+      #back-to-top:hover {
+          color: #e9ebec;
+          background: #999;
+      }
+      #back-to-top.show {
+          opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default" role="navigation" style="margin-bottom:0;">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://intekhabrizvi.github.com">Intekhab Rizvi</a>
+            <a class="navbar-brand" href="http://intekhabrizvi.github.com/mongodb-library-for-codeigniter.html">CIMongo</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#installation" class="scroll">Installation</a></li>
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Methods <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#method-select">Select Methods</a></li>
+                    <li><a href="#method-update">Update Methods</a></li>
+                    <li><a href="#method-delete">Delete Methods</a></li>
+                    <li><a href="#method-aggregate">Aggregation Methods</a></li>                    
+                    <li><a href="#method-index">Index Methods</a></li>                    
+                    <li><a href="#method-db">DB Level Methods</a></li>
+                    <li><a href="#method-extra">Extra Methods</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/intekhabrizvi/cimongo">Download</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    </header>
+    <div class="presentation">
+          <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="main">
+                  <h1>CIMongo</h1>
+                  <p>MongoDB Library for Codeigniter</p>
+                  <p><small>By intekhab rizvi</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="box" id="installation">
+      <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1>How to install & configure</h1>
+                <p>Download the repo and unzip it. You will see 2 folder config and libraries. Paste those 2 folder in your codeigniter application folder.</p>
+                <p>After this, you will see mongo_db.php file in your application/config and application/libraries folder of codeigniter setup.</p>
+                <p>Now its time to configure cimongo library as per mongodb login details.</p>
+                <p>&nbsp;1) Open config/mongo_db.php file and set mongodb login details.</p>
+                <p>&nbsp;2) Open config/autoload.php file and add 'mongo_db' in $autoload['libraries'] array. </p>
+                <p>Thats it. Installation and Configuration completed. By default library connect to database provided in "default" group.</p>
+                <p>Now you can access the methods using <b>$this->mongo_db-></b> in your controller as well as in model.</p>
+                <h1>Need more then one database connection ??</h1>
+                <p>You can have more then one database in your application and you can use them simultaneously in your app just like Codeigniter Active Data Record.</p>
+                <p>1) Open application/config/mongo_db.php file and create one more database group inside that file. For example</p>
+                <code>$config['mongo_db']['newdb']['hostname'] = 'localhost';<br/>
+                      $config['mongo_db']['newdb']['port'] = '27017';<br/>
+                      $config['mongo_db']['newdb']['username'] = 'username';<br/>
+                      $config['mongo_db']['newdb']['password'] = 'password';<br/>
+                      $config['mongo_db']['newdb']['database'] = 'database';<br/>
+                      $config['mongo_db']['newdb']['db_debug'] = TRUE;<br/>
+                      $config['mongo_db']['newdb']['write_concerns'] = (int)1;<br/>
+                      $config['mongo_db']['newdb']['journal'] = TRUE;<br/>
+                      $config['mongo_db']['newdb']['read_preference'] = NULL;<br/>
+                      $config['mongo_db']['newdb']['read_preference_tags'] = NULL;
+                </code>
+                <p>You can change group name from "newdb" to anything else you want. After changing the group name, save the file.</p>
+                <p>2) Now open your controller or model file, where you need another database connection active and write below code in the constructor of the class.</p>
+                <code>$this->load->library('mongo_db', array('activate'=>'newdb'),'mongo_db2');</code>
+                <p>This will make new connection on new mongoDB and make it available to use as <b>$this->mongo_db2-></b> inside class</p>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="box" id="method-select">
+      <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1>Select Methods</h1>
+                <ul>
+                  <li><b>select</b> Get select fields from returned documents</li>
+                  <li><b>where</b> OR <b>get_where</b> Where section of the query</li>
+                  <li><b>where_in</b> Where something is in an array of something</li>
+                  <li><b>where_in_all</b> Where something is in all of an array of * something</li>
+                  <li><b>where_not_in</b> Where something is not in array of something</li>
+                  <li><b>where_or</b> Where something is based on or</li>
+                  <li><b>where_gt</b> Where something is greater than something</li>
+                  <li><b>where_gte</b> Where something is greater than or equal to something</li>
+                  <li><b>where_lt</b> Where something is less than something</li>
+                  <li><b>where_lte</b> Where something is less than or equal to something</li>
+                  <li><b>where_between</b> Where something is in between to something</li>
+                  <li><b>where_between_ne</b> Where something is in between and but not equal to something</li>
+                  <li><b>where_ne</b> Where something is not equal to something</li>
+                  <li><b>like</b> Where something is search by like query</li>
+                  <li><b>order_by</b> Order the results</li>
+                  <li><b>limit</b> OR <b>offset</b> Limit the number of returned results</li>
+                  <li><b>count</b> Document Count based on where query</li>
+                  <li><b>distinct</b> Retrieve a list of distinct values for the given key across a single collection</li>
+                  <li><b>find_one</b> Retrieve single document from collection</li>
+                </ul>
+                <h1 id="method-update">Update Methods</h1>
+                <ul>
+                  <li><b>set</b> Sets a field to a value</li>
+                  <li><b>unset_field</b> Unsets a field</li>
+                  <li><b>addtoset</b> Adds a value to an array if doesn't exist</li>
+                  <li><b>push</b> Pushes a value into an array field</li>
+                  <li><b>pop</b> Pops a value from an array field</li>
+                  <li><b>pull</b> Removes an array by the value of a field</li>
+                  <li><b>rename_field</b> Rename a field</li>
+                  <li><b>inc</b> Increments the value of a field</li>
+                  <li><b>mul</b> Multiple the value of a field</li>
+                  <li><b>max</b> Updates the value of the field to a specified value if the specified value is greater than the current value of the field</li>
+                  <li><b>min</b> Updates the value of the field to a specified value if the specified value is less than the current value of the field.</li>
+                  <li><b>update</b> Update a single document in a collection</li>
+                  <li><b>update_all</b> Update all documents in a collection</li>
+                </ul>
+                <h1 id="method-delete">Delete Methods</h1>
+                <ul>
+                  <li><b>delete</b> Delete a single document in a collection</li>
+                  <li><b>delete_all</b> Delete all documents in a collection</li>
+                </ul>
+                <h1 id="method-aggregate">Aggregate Methods</h1>
+                <ul>
+                  <li><b>aggregate</b> Perform aggregation query on document</li>
+                </ul>
+                <h1 id="method-index">Index Methods</h1>
+                <ul>
+                    <li><b>add_index</b> Create a new index on collection</li>
+                    <li><b>remove_index</b> Remove index from collection</li>
+                    <li><b>list_indexes</b> Show all index created on collections</li>
+                </ul>
+                <h1 id="method-db">DB Methods</h1>
+                <ul>
+                      <li><b>switch_db</b> Switch to a different database</li>
+                      <li><b>drop_db</b> Drops a database</li>
+                      <li><b>drop_collection</b> Drops a collection</li>
+                </ul>
+                <h1 id="method-extra">Extra Methods</h1>
+                <ul>
+                   <li><b>date</b> Create or convert date to MongoDB based Date</li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $('document').ready(function (){
+        $('div.presentation').css('height',(screen.height-120)+'px');
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+
+        if ($('#back-to-top').length) {
+          var scrollTrigger = 100, // px
+              backToTop = function () {
+                  var scrollTop = $(window).scrollTop();
+                  if (scrollTop > scrollTrigger) {
+                      $('#back-to-top').addClass('show');
+                  } else {
+                      $('#back-to-top').removeClass('show');
+                  }
+              };
+          backToTop();
+          $(window).on('scroll', function () {
+              backToTop();
+          });
+          $('#back-to-top').on('click', function (e) {
+              e.preventDefault();
+              $('html,body').animate({
+                  scrollTop: 0
+              }, 700);
+          });
+      }
+      });
+    </script>
+  </body>
+</html>
