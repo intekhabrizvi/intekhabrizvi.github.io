@@ -157,9 +157,9 @@
                 <p>2) Copy the files from the download to the corresponding directories in yourapplication directory. Make sure you don't overwrite any of your own files if you've customized them. You may need to create the plugins directory under application. 
                 </p>
                 <code>
-                  config => system/application/config<br/>
-                  libraries => system/application/libraries<br/>
-                  plugins => system/application/plugins
+                  config => application/config<br/>
+                  libraries => application/libraries<br/>
+                  plugins => application/plugins
                 </code>
                 <p>3) Once that's done, anywhere you enable the profiler using <code>$this->output->enable_profiler(TRUE)</code>, you should see the new profiler</p>
               </div>
