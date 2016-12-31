@@ -1,0 +1,202 @@
+@import url('bootstrap.min.css');
+
+@font-face {
+    font-family: 'Range Mono';
+    src: url('../fonts/range-mono-light-webfont.woff2') format('woff2'), url('../fonts/range-mono-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Range Mono';
+    src: url('../fonts/range-mono-normal-webfont.woff2') format('woff2'), url('../fonts/range-mono-normal-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Range Mono';
+    src: url('../fonts/range-mono-bold-webfont.woff2') format('woff2'), url('../fonts/range-mono-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    font-family: 'Range Mono', Helvetica, sans-serif;
+}
+section {
+    position: relative;
+    margin: 50px 0 0 0
+}
+
+.pgp_key{
+	background: white;
+	font-size: 0.8em; 
+	color: #98999E; 
+	border:none;
+	line-height:1.4em;
+}
+
+h1 {
+    color: #1482a7;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+p {
+    color: #595f6e;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+p a {
+    color: #1482a7;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+ol li {
+    color: #59000e;
+    font-family: "Lato";
+    font-weight: bold;	
+    font-size: 16px;
+    list-style: outside none none;
+    margin: 1px 0 7px;
+    padding: 3px 0;
+}
+
+ol li a {
+    color: #595f6e;
+    text-decoration: none;
+}
+
+ol li a:hover, a:focus, a:active {
+    color: #1482A7;
+    border-bottom:1px solid #81D4F9;
+    text-decoration: none;
+}
+
+footer {
+    margin: 5px 0 80px;
+    position: relative;
+    width: 100%; 
+    text-align: center; 
+    padding-top: 25px
+}
+
+footer span{
+	font-size:0.6em;
+	display: block;
+}
+
+footer small{
+	padding-top:10px;
+	font-size: 0.5em;
+	display: block;
+}
