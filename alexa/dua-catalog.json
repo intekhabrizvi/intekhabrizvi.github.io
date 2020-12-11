@@ -1,0 +1,181 @@
+{
+  "type": "AMAZON.MusicRecording",
+  "version": 2.0,
+  "locales": [
+    {
+      "country": "US",
+      "language": "en"
+    },
+    {
+      "country": "IN",
+      "language": "en"
+    },
+    {
+      "country": "AU",
+      "language": "en"
+    },
+    {
+      "country": "CA",
+      "language": "en"
+    },
+    {
+      "country": "GB",
+      "language": "en"
+    },
+    {
+      "country": "ES",
+      "language": "es"
+    },
+    {
+      "country": "US",
+      "language": "es"
+    },
+    {
+      "country": "MX",
+      "language": "es"
+    },
+    {
+      "country": "FR",
+      "language": "fr"
+    },
+    {
+      "country": "CA",
+      "language": "fr"
+    },
+    {
+      "country": "IN",
+      "language": "hi"
+    },
+    {
+      "country": "IT",
+      "language": "it"
+    },
+    {
+      "country": "JP",
+      "language": "ja"
+    },
+    {
+      "country": "BR",
+      "language": "pt"
+    }
+  ],
+  "entities": [
+    {
+      "id": "dua.001",
+      "names": [
+        {
+          "language": "en",
+          "value": "Duae faraj"
+        },
+        {
+          "language": "hi",
+          "value": "दुआ ई फराज"
+        },
+        {
+          "language": "es",
+          "value": "Duae faraj"
+        }
+      ],
+      "popularity": {
+        "default": 100
+      },
+      "lastUpdatedTime": "2020-12-10T00:00:00.000Z",
+      "alternateNames": [
+        {
+          "language": "en",
+          "values": [
+            "Dua e faraj",
+            "Dua faraj",
+            "faraj",
+            "Azumal Bala",
+            "Dua Azumal Bala",
+            "Dua e Azumal Bala",
+          ]
+        },
+        {
+          "language": "es",
+          "values": [
+            "Dua e faraj",
+            "Dua faraj",
+            "faraj",
+            "Azumal Bala",
+            "Dua Azumal Bala",
+            "Dua e Azumal Bala",
+          ]
+        },
+        {
+          "language": "es",
+          "values": [
+            "दुआ ई फराज",
+            "दुआ फराज",
+            "फराज",
+            "अजुमल बाला",
+            "दुआ आजुमल बाला",
+            "दुआ ए आज़ुमल बाला",
+          ]
+        }
+      ],
+      "locales": [
+        {
+          "country": "US",
+          "language": "en"
+        },
+        {
+          "country": "IN",
+          "language": "en"
+        },
+        {
+          "country": "AU",
+          "language": "en"
+        },
+        {
+          "country": "CA",
+          "language": "en"
+        },
+        {
+          "country": "GB",
+          "language": "en"
+        },
+        {
+          "country": "ES",
+          "language": "es"
+        },
+        {
+          "country": "US",
+          "language": "es"
+        },
+        {
+          "country": "MX",
+          "language": "es"
+        },
+        {
+          "country": "FR",
+          "language": "fr"
+        },
+        {
+          "country": "CA",
+          "language": "fr"
+        },
+        {
+          "country": "IN",
+          "language": "hi"
+        },
+        {
+          "country": "IT",
+          "language": "it"
+        },
+        {
+          "country": "JP",
+          "language": "ja"
+        },
+        {
+          "country": "BR",
+          "language": "pt"
+        }
+      ],
+      "languageOfContent": [
+        "ar"
+      ]
+    }
+  ]
+}
