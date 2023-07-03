@@ -143,7 +143,7 @@ section {
 }
 
 h1 {
-    color: #1482a7;
+    color: #3a3bf6;
     font-weight: 400;
     margin: 0 0 10px;
 }
@@ -156,7 +156,7 @@ p {
 }
 
 p a {
-    color: #1482a7;
+    color: #3a3bf6;
     font-weight: 700;
     text-decoration: none;
 }
@@ -177,8 +177,8 @@ ol li a {
 }
 
 ol li a:hover, a:focus, a:active {
-    color: #1482A7;
-    border-bottom:1px solid #81D4F9;
+    color: #3a3bf6;
+    border-bottom:1px solid #071a86;
     text-decoration: none;
 }
 
@@ -201,4 +201,21 @@ footer small{
 	padding-top:10px;
 	font-size: 0.6em;
 	display: block;
+}
+
+div.btn-box{
+    margin-top: 40px !important;
+}
+
+a.btn-verify{
+    padding: 10px 25px;
+    border: 1px solid #3a3bf6;
+    border-radius: 10px;
+    color: #3a3bf6;
+    text-decoration: none;
+}
+
+a.btn-verify:hover{
+    background-color: #3a3bf6;
+    color: #fff;
 }
