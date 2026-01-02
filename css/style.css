@@ -1,4 +1,4 @@
-@import url('bootstrap.min.css');
+@import url('./bootstrap.min.css');
 
 @font-face {
     font-family: 'Range Mono';
@@ -144,8 +144,11 @@ section {
 
 h1 {
     color: #3a3bf6;
-    font-weight: 400;
+    font-weight: 700;
     margin: 0 0 10px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 p {
@@ -153,6 +156,13 @@ p {
     font-size: 0.9em;
     font-weight: 300;
     line-height: 1.5em;
+}
+
+div.certificates{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
 }
 
 p a {
@@ -219,3 +229,23 @@ a.btn-verify:hover{
     background-color: #3a3bf6;
     color: #fff;
 }
+
+section.book {
+    font-family: "Lato", Helvetica, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+  }
+  section.book p {
+    font-size: 16px !important;
+    font-weight: normal !important;
+    padding-bottom: 1rem;
+  }
+  section.book ol {
+    margin-bottom: 0.5rem;
+  }
+  section.book ol li {
+    padding-left: 1rem;
+    line-height: 1.5;
+    color: #595f6e;
+    font-weight: normal;
+  }
